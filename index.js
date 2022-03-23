@@ -3,6 +3,7 @@ const cors = require('cors')
 const app = express()
 const logger = require('./loggerMiddleware')
 
+
 app.use(cors())
 app.use(express.json())
 
