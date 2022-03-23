@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const connectionString = 'mongodb+srv://guillermo:OtC5FEYz9qSDYwUC@cluster0.qxuyg.mongodb.net/notes?retryWrites=true&w=majority'
+const connectionString = ''
 const {Schema} = mongoose
 //conexion a mongodb
 
