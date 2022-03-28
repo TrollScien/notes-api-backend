@@ -1,0 +1,15 @@
+
+POST http://localhost:3001/api/users
+content-type: application/json
+
+{
+    "username":"midudev",
+    "name": "miguel",
+    "password": "lamidupassword"
+} 
+
+
+###
+
+POST http://localhost:3001/api/users 
+content-type: application/json

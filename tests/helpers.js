@@ -1,24 +1,25 @@
 const supertest = require('supertest')
-const {app} = require('../index')
+const { app } = require('../index')
 const api = supertest(app)
+const User = require('../models/User')
 
 const initialNotes = [
-    {
-      content: 'Aprendiendo fullstack',
-      important: true,
-      date: new Date()
-    },
-    {
-      content: 'en el canal de midudev',
-      important: true,
-      date: new Date()
-    },
-    {
-      content: 'en Youtube',
-      important: true,
-      date: new Date()
-    }
-  ]
+  {
+    content: 'Aprendiendo fullstack',
+    important: true,
+    date: new Date()
+  },
+  {
+    content: 'en el canal de midudev',
+    important: true,
+    date: new Date()
+  },
+  {
+    content: 'en Youtube',
+    important: true,
+    date: new Date()
+  }
+]
 
 const getAllContentsFromNotes = async () => {
   const response = await api.get('/api/notes')
@@ -26,6 +27,12 @@ const getAllContentsFromNotes = async () => {
 
     contents: response.body.map(note => note.content),
     response
-  } 
+  }
 }
-module.exports = { initialNotes, api, getAllContentsFromNotes }
+
+const getUsers = async () => {
+  const usersDB = await User.find({})
+  return usersAtStart = usersDB.map(user => user.toJSON())
+}
+
+module.exports = { initialNotes, api, getAllContentsFromNotes, getUsers }
