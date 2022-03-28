@@ -4,12 +4,12 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const logger = require('./loggerMiddleware')
-const Note = require('./models/Note')
 const notFound = require('./middleware/notFound')
 const handleErrors = require('./middleware/handleErrors')
 // routes
 const usersRouter = require('./controllers/users')
 const notesRouter = require('./controllers/notes')
+const loginRouter = require('./controllers/login')
 
 app.use(cors())
 app.use(express.json())
@@ -23,6 +23,8 @@ app.get('/', (request, response) => {
 app.use('/api/notes', notesRouter)
 
 app.use('/api/users', usersRouter)
+
+app.use('/api/login', loginRouter)
 
 app.use(notFound)
 

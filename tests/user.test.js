@@ -11,7 +11,6 @@ describe('GET all users', () => {
       .expect(200)
       .expect('Content-Type', /application\/json/)
   })
-
 })
 
 describe('creating a new user', () => {

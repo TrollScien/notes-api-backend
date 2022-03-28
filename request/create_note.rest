@@ -1,14 +1,14 @@
 
 POST http://localhost:3001/api/notes 
 content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDBjZmVhY2FiNmM2OGUxYzEyY2JiYiIsInVzZXJuYW1lIjoibWlkdWRldiIsImlhdCI6MTY0ODQ5MjQ4NywiZXhwIjoxNjQ5MDk3Mjg3fQ.Cw-oJd0pNGZnq5Oha_jtNYs9yEWUszmeSDLXAtcR_Go
 
 {
-    "content":"Esto es una nueva nota",
-    "important": true,
-    "userId": "6240cfeacab6c68e1c12cbbb"
+    "content":"Esto es una nueva nota con el token y el middleware",
+    "important": true
 } 
 
-
+# eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDBjZmVhY2FiNmM2OGUxYzEyY2JiYiIsInVzZXJuYW1lIjoibWlkdWRldiIsImlhdCI6MTY0ODQ4OTI3NX0.-1vF5qcJsy_exRveXLC2oRfE_5Ri2edVbtwFprQ955Y
 ###
 
 POST http://localhost:3001/api/notes 
